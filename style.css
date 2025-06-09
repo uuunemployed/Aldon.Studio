@@ -351,6 +351,19 @@ background-color: #000;
 #slide-p{
     color: #000000;
 }
+
+.overlay-content-mobile{
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    bottom: 0;
+    height: 30%;
+    flex-direction: column;
+    padding: 0px 24px 40px;
+    justify-content: space-between;
+}
+
+
 @media (max-width: 1400px) {
     h1{
         font-size: 124px !important;
@@ -434,16 +447,26 @@ background-color: #000;
     }
     .slider-button{
         display: block !important;
+        width: 100%;
     }
-    .overlay-content-1-p-2,.overlay-content-2{
+    .overlay-content{
         display: none;
     }
     .slide img{
-
+                height: 75%;
     }
+    .overlay{
+        align-items: center;
+    }
+
+    .overlay-content-mobile{
+        display: flex !important;
+    }
+
     .slide{
         width: 200%;
         overflow-x: hidden;
+        justify-content: center;
     }
 }
 
