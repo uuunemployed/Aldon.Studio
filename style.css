@@ -264,6 +264,7 @@ background-color: #000;
   overflow-x: auto;
   scroll-behavior: smooth;
   scrollbar-width: none;
+  position: relative;
 }
 
 .slider::-webkit-scrollbar {
@@ -361,8 +362,35 @@ background-color: #000;
     flex-direction: column;
     padding: 0px 24px 40px;
     justify-content: space-between;
+      overflow: hidden;
+    z-index: 21;
 }
 
+.slider-button{
+    all: unset;
+    align-items: center;
+    padding: 16px 24px;
+    color: #fff;
+    justify-content: center;
+    gap: 8px;
+    font-size: 18px;
+    font-family: Inter;
+    font-weight: 600;
+    border-radius: 100px;
+    border: 2px #fff solid;
+
+}
+
+.shadow-div{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #0000004a;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+}
 
 @media (max-width: 1400px) {
     h1{
@@ -446,14 +474,13 @@ background-color: #000;
         display: block;
     }
     .slider-button{
-        display: block !important;
-        width: 100%;
+        display: flex;
     }
     .overlay-content{
         display: none;
     }
     .slide img{
-                height: 75%;
+        height: 75%;
     }
     .overlay{
         align-items: center;
@@ -461,12 +488,18 @@ background-color: #000;
 
     .overlay-content-mobile{
         display: flex !important;
+        gap: 8px;
     }
 
     .slide{
         width: 200%;
         overflow-x: hidden;
         justify-content: center;
+    }.overlay-content-1-p-1{
+        font-size: 36px;
+    }
+    .shadow-div{
+        display: block;
     }
 }
 
